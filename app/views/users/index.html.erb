@@ -1,0 +1,14 @@
+<div class = "container" >
+    <% @users.each do |user| %>
+    <div class="pro">
+    <% if user.avatar.url %>
+    <%= image_tag user.avatar.url %>
+    <br>
+    <br>
+    <p>First Name: <%= link_to user.fname, user_path(user) %></p>
+    <p>Last Name: <%= user.lname %></p>
+    <p>Username: <%= user.username %></p>
+  </div>
+    <% end %>
+    <% end %>
+</div>
