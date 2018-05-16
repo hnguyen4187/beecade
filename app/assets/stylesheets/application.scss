@@ -38,3 +38,24 @@ img {
   padding: 20px;
   margin-bottom: 10px;
 }
+
+div#image{
+  background-image: url("vintage.png");
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home-login{
+  text-align: center;
+  padding-top: 180px;
+}
+
+.home-login-2{
+  text-align: center;
+  padding-top: 113px;
+}
+
+h1{
+  font-size: 50px;
+}
