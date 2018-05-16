@@ -5,11 +5,19 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <% if current_user %>
+      <nav class="navbar navbar-dark bg-dark">
+        <%= link_to 'Home', root_path %>
+        <%= link_to 'All Users', users_path %>
+        <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
+      </nav>
+    <%end%>
     <%= yield %>
   </body>
 </html>

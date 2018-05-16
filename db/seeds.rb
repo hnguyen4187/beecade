@@ -5,3 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+def seed_image(file_name)
+  File.open(File.join(Rails.root, "/app/assets/images/seed/#{file_name}.png"))
+end
+
+user_list = [
+  ["bee@gmail.com", "123456","123456", "bee", "nguyen", "thatdudeebee", "Bee"],
+  ["apple@gmail.com", "123456", "123456", "apple", "seed", "appleseed", "apple"]
+]
+
+user_list.each do |email, password, password_confirmation, fname, lname, username, avatar|
+  people = User.create(email: email, password: password, password_confirmation: password_confirmation, fname: fname, lname: lname, username: username)
+  people.avatar = seed_image(avatar)
+  people.save
+end

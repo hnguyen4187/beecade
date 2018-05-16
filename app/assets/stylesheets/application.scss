@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+  line-height: 0.8;
+}
+
+img {
+  width: 300px;
+  height: auto;
+}
+
+.pro{
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 10px;
+    width: 800px;
+    resize: horizontal;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.navbar{
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-bottom: 10px;
+}
