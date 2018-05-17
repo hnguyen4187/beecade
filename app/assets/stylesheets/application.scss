@@ -14,13 +14,8 @@
  *= require_self
  */
 
-body{
+body#log-in-page{
   line-height: 0.8;
-}
-
-img {
-  width: 300px;
-  height: auto;
 }
 
 .pro{
@@ -56,6 +51,12 @@ div#image{
   padding-top: 113px;
 }
 
+h1#h1ForLogin{
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
+  color: black;
+}
 h1{
-  font-size: 50px;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 60px;
 }

@@ -1,0 +1,141 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+//css for hangman game
+
+body#body-2{
+  background-color: #2a75bb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffcb05;
+  text-align: center;
+}
+.container-main{
+  margin-top: -120px;
+}
+
+.container-main img{
+  width: 400px;
+}
+
+.bottomGuess {
+  padding-top: 20px;
+}
+
+#hintContainer{
+  width: 800px;
+  margin: auto;
+  margin-top: -110px;
+}
+
+img#photos{
+  width: 400px;
+}
+
+.modal1{
+  border: solid;
+  border-color: white;
+  border-radius: 25px;
+  position: fixed;
+  height: 350px;
+  width: 400px;
+  top: 20%;
+  left: 35%;
+  color: white;
+}
+
+#background-image{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+}
+#background-image2{
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1;
+  background-color: black;
+}
+
+#winner-image{
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url("/images/Bulbasaur.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#loser-image{
+  margin: auto;
+  height: 200px;
+  width: 200px;
+  background-image: url("/images/sad-face.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.modal2{
+  border: solid;
+  border-color: white;
+  border-radius: 25px;
+  position: fixed;
+  height: 350px;
+  width: 400px;
+  top: 20%;
+  left: 35%;
+  color: white;
+}
+
+#button:hover{
+  cursor: pointer;
+  text-shadow: -.25px -.25px 0 white,
+                .25px .25px white;
+}
+
+//css for memory game
+div#memory_board{
+  background: #2a75bb;
+  border:#999 1px solid;
+  width: 800px;
+  height: 540px;
+  padding: 24px;
+  margin: 0px auto;
+  margin-bottom: 50px;
+}
+
+div#memory_board > div {
+  background: #ffcb05;
+  border: #000 1px solid;
+  width: 71px;
+  height: 71px;
+  float: left;
+  margin: 10px;
+  padding: 20px;
+  font-size: 64px;
+  cursor: pointer;
+  text-align: center;
+}
+div#memory_board,
+div#memory_board > div {
+  box-sizing: content-box
+}
+
+div#memory_board > div > img {
+  height: auto;
+  width: 100%;
+  vertical-align: baseline;
+}
+
+h1{
+  text-align: center;
+  color: #2a75bb;
+}
