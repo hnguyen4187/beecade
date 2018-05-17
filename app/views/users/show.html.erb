@@ -1,13 +1,15 @@
 <div class="container pro">
-  <p>Your Profile: </p>
-    <% if @user.avatar.url %>
-    <%= image_tag @user.avatar.url %>
+  <% if @user.id == current_user.id %>
+    <p>Your Profile: </p>
+  <%end%>  
+      <% if @user.avatar.url %>
+      <%= image_tag @user.avatar.url %>
+      <%end%>
+      <p>First name: <%= @user.fname %></p>
+      <p>Last name: <%= @user.lname %></p>
+      <p>Username: <%= @user.username %></p>
+      <% if @user.id == current_user.id %>
+      <%= link_to "Edit Profile", edit_user_path(@user) %>
+      <%= link_to 'Delete Profile', user_path(@user), :method => :delete, data: {confirm: "Are you sure?"} %>
     <%end%>
-    <p>First name: <%= @user.fname %></p>
-    <p>Last name: <%= @user.lname %></p>
-    <p>Username: <%= @user.username %></p>
-    <% if @user.id == current_user.id %>
-    <%= link_to "Edit Profile", edit_user_path(@user) %>
-    <%= link_to 'Delete Profile', user_path(@user), :method => :delete, data: {confirm: "Are you sure?"} %>
-  <%end%>
 </div>

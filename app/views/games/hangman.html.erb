@@ -1,0 +1,50 @@
+<body id ="body-2">
+
+		<div class="container-main">
+			<%= image_tag "/images/pokemonLogo.png" %>
+		</div>
+
+	 	<div id="hintContainer">
+			<img id="photos">
+		</div>
+
+		<div class="guessPokemon">
+				<h4>WHO'S THAT POKEMON?!</h4>
+		</div>
+
+		<div class="wordGuess">
+				<h3 id="wordToGuess">_ _ _ _ _ _ _</h3>
+		</div>
+
+		<div class="bottomGuess">
+		 		WRONG GUESSES: <span id="wrongGuesses"></span>
+		</div>
+
+		<div class="GuessBox">
+				GUESSES LEFT: <span id="numGuesses"></span>
+				<br>
+		</div>
+
+		<div class="panel-body">
+				SCORE: <span id="winCounter">0</span>
+		</div>
+
+		<div id="background-image">
+			<div class="modal1">
+				<p>You guess the correct POKEMON!</p>
+					<div id="winner-image"></div>
+				<p id="button">X</p>
+			</div>
+		</div>
+
+		<div id="background-image2">
+			<div class="modal2">
+				<h2>Game Over!</h2>
+				<p>Sorry! Try Again!</p>
+					<div id="loser-image"></div>
+				<p id="button2">X</p>
+			</div>
+		</div>
+
+	<script>beginGame()</script>
+</body>
