@@ -18,8 +18,10 @@
   var second = 0, minute = 0;
   var clock;
   var interval;
+
   function startTimer(){
      clock = document.querySelector(".timer");
+      var second = 0, minute = 0;
       interval = setInterval(function(){
           clock.innerHTML = minute+"mins "+second+"secs";
           second++;
@@ -30,9 +32,9 @@
       },1000);
   }
 
-function stopTimer() {
-  clearInterval(interval);
-}
+  function stopTimer() {
+    clearInterval(interval);
+  }
 
   function newBoard() {
   	tiles_flipped = 0;
@@ -81,6 +83,7 @@ function stopTimer() {
   }
 
   function gameIsOver() {
+    stopTimer();
     alert("Great Job!!...Generating New Board");
     document.getElementById('memory_board').innerHTML = "";
     newBoard();
