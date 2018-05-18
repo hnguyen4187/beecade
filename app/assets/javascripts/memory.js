@@ -1,6 +1,4 @@
 
-
-
   var memory_array = ['/images/Aerodactyl.png','/images/Aerodactyl.png',
                       '/images/Arcanine.png','/images/Arcanine.png',
                       '/images/Blastoise.png','/images/Blastoise.png',
@@ -17,6 +15,24 @@
   var memory_values = [];
   var memory_tile_ids = [];
   var tiles_flipped = 0;
+  var second = 0, minute = 0;
+  var clock;
+  var interval;
+  function startTimer(){
+     clock = document.querySelector(".timer");
+      interval = setInterval(function(){
+          clock.innerHTML = minute+"mins "+second+"secs";
+          second++;
+          if(second == 60){
+              minute++;
+              second=0;
+          }
+      },1000);
+  }
+
+function stopTimer() {
+  clearInterval(interval);
+}
 
   function newBoard() {
   	tiles_flipped = 0;
@@ -28,6 +44,7 @@
     });
 
   	document.getElementById('memory_board').innerHTML = output;
+    startTimer();
   }
 
   function canFlipCard(tile) {
