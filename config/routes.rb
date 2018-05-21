@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'games/hangman'
   get 'games/memory'
+  get 'games/show'
   # get 'points/show'
   # get 'points/index'
   # get 'points/view'

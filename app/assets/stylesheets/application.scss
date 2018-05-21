@@ -26,7 +26,20 @@ body#log-in-page{
     resize: horizontal;
     overflow: auto;
     margin-bottom: 10px;
-    line-height: 1.0;
+    line-height: .8;
+}
+
+.pro-self{
+  border-radius: 8px;
+  border: 1px solid;
+  padding: 8px;
+  width: 600px;
+  resize: horizontal;
+  overflow: auto;
+  margin-bottom: 10px;
+  line-height: .8;
+  margin-left: 30px;
+
 }
 
 .navbar{
@@ -37,7 +50,7 @@ body#log-in-page{
 
 div#image{
   background-image: url("vintage.png");
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   height: 100vh;
 }

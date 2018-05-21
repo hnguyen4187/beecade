@@ -1,10 +1,12 @@
-<div class="container pro">
+<div class="pro-self">
   <% if @user.id == current_user.id %>
     <p>Your Profile: </p>
   <%end%>
       <% if @user.avatar.url %>
       <%= image_tag @user.avatar.url %>
       <%end%>
+      <br>
+      <br>
       <p>First name: <%= @user.fname %></p>
       <p>Last name: <%= @user.lname %></p>
       <p>Username: <%= @user.username %></p>
