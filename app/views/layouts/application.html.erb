@@ -15,9 +15,9 @@
     <% if current_user %>
       <nav class="navbar navbar-dark bg-dark">
         <%= link_to 'Home', root_path %>
-        <%= link_to 'Hangman Game', games_hangman_path %>
-        <%= link_to 'Memory Game', games_memory_path %>
         <%= link_to 'View Users', users_path %>
+        <%= link_to 'Play Games', games_show_path %>
+        <%= link_to 'High Scores', points_path %>
         <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
       </nav>
     <%end%>
