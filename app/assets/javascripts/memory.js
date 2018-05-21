@@ -1,4 +1,4 @@
-
+//array of images of pokemon
   var memory_array = ['/images/Aerodactyl.png','/images/Aerodactyl.png',
                       '/images/Arcanine.png','/images/Arcanine.png',
                       '/images/Blastoise.png','/images/Blastoise.png',
@@ -17,8 +17,9 @@
   var tiles_flipped = 0;
   var second = 0, minute = 0;
   var clock;
-  var interval;
+  var interval = null;
 
+  //timer
   function startTimer(){
      clock = document.querySelector(".timer");
       var second = 0, minute = 0;
@@ -32,8 +33,10 @@
       },1000);
   }
 
+  //clear timer when game is completed
   function stopTimer() {
     clearInterval(interval);
+    interval = null;
   }
 
   function newBoard() {
@@ -46,7 +49,6 @@
     });
 
   	document.getElementById('memory_board').innerHTML = output;
-    startTimer();
   }
 
   function canFlipCard(tile) {
@@ -113,6 +115,9 @@
   }
 
   function memoryFlipTile(tile, value) {
+    //timer will start once first tile is clicked
+    if(interval == null)
+      startTimer();
   	if (canFlipCard(tile)) {
   		flipCard(tile, value);
       if (areNoCardsFlipped()) {

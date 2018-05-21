@@ -11,8 +11,9 @@ def seed_image(file_name)
 end
 
 user_list = [
-  ["bee@gmail.com", "123456","123456", "bee", "nguyen", "thatdudeebee", "Bee"],
-  ["apple@gmail.com", "123456", "123456", "apple", "seed", "appleseed", "apple"]
+  ["ash@gmail.com", "123456","123456", "Ash", "Ketchum", "Ash-Ketchum", "Ash-2"],
+  ["misty@gmail.com", "123456", "123456", "Misty", "Of the Cerulean Gym", "Happy-Misty", "Misty-1"],
+  ["brock@gmail.com", "123456", "123456", "Brock", "Of the Pewter Gmy", "Rock-On", "Brock-3"]
 ]
 
 user_list.each do |email, password, password_confirmation, fname, lname, username, avatar|

@@ -1,7 +1,7 @@
 <div class="container pro">
   <% if @user.id == current_user.id %>
     <p>Your Profile: </p>
-  <%end%>  
+  <%end%>
       <% if @user.avatar.url %>
       <%= image_tag @user.avatar.url %>
       <%end%>
@@ -9,7 +9,7 @@
       <p>Last name: <%= @user.lname %></p>
       <p>Username: <%= @user.username %></p>
       <% if @user.id == current_user.id %>
-      <%= link_to "Edit Profile", edit_user_path(@user) %>
-      <%= link_to 'Delete Profile', user_path(@user), :method => :delete, data: {confirm: "Are you sure?"} %>
-    <%end%>
+      <p><%= link_to "Edit Profile", edit_user_path(@user) %></p>
+      <p><%= link_to 'Delete Profile', user_path(@user), :method => :delete, data: {confirm: "Are you sure?"} %></p>
+      <%end%>
 </div>
