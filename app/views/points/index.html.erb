@@ -1,4 +1,4 @@
-<h1>Points#index</h1>
+<h1>High Scores</h1>
 
   <% Game.all.each do |game| %>
   <p>Game:  <%=game.name %></p>
@@ -6,7 +6,7 @@
   <% User.all.each do |user| %>
 <% if user.points.where(game_id: game.id).length >0 %>
 
-  <p>High Score: <%= user.points.where(game_id: game.id).max_by{|point| point.score.to_i}.score %> belongs <%= user.username %></p>
+  <p>High Score: <%= user.points.where(game_id: game.id).max_by{|point| point.score.to_i}.score %> belongs to <%= user.username %></p>
 
   <% end %>
   <% end %>
