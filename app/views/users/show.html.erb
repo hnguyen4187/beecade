@@ -10,6 +10,11 @@
       <p>First name: <%= @user.fname %></p>
       <p>Last name: <%= @user.lname %></p>
       <p>Username: <%= @user.username %></p>
+
+      <% if @user.points.length > 0 %>
+      <p>High Score: <%= @user.points.where(game_id: 1).max_by{|point| point.score.to_i}.score %> for <%= Game.find(1).name %> </p>
+      <% end %>
+
       <% if @user.id == current_user.id %>
       <p><%= link_to "Edit Profile", edit_user_path(@user) %></p>
       <p><%= link_to 'Delete Profile', user_path(@user), :method => :delete, data: {confirm: "Are you sure?"} %></p>

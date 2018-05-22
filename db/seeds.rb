@@ -21,3 +21,13 @@ user_list.each do |email, password, password_confirmation, fname, lname, usernam
   people.avatar = seed_image(avatar)
   people.save
 end
+
+game_list = [
+            "hangman",
+            "memory"
+]
+
+game_list.each do |name|
+  game = Game.create(name: name)
+  game.save
+end
