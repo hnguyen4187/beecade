@@ -85,6 +85,12 @@
   }
 
   function gameIsOver() {
+    $.ajax({
+    beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+    type: "POST",
+    url: "/points",
+    data: { points: { score: clock.innerText, game: $("#hidden-2").text() } }
+  })
     stopTimer();
     alert("Great Job!!...Generating New Board");
     document.getElementById('memory_board').innerHTML = "";
