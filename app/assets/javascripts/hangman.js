@@ -149,6 +149,12 @@ function beginGame(){
 		}
 		else if(guessesLeft === 0)
 		{
+			$.ajax({
+      beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+      type: "POST",
+      url: "/points",
+      data: { points: { score: winCount, game: $("#hidden").text() } }
+		})
 			winCount= 0;
 			document.getElementById('winCounter').innerHTML = winCount;
 			document.getElementById('background-image2').style.display = "block";
