@@ -1,4 +1,6 @@
 <div class="container">
+  <br>
+  <br>
   <%= form_for @user do |f| %>
     <%= f.label :fname, "First name: " %>
     <%= f.text_field :fname %>
@@ -12,6 +14,8 @@
     <%= f.label :avatar %><br />
     <%= f.file_field :avatar %>
     <br>
+    <br>
     <%= f.submit %>
   <% end %>
+
 </div>

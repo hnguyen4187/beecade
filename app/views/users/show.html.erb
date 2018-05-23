@@ -12,11 +12,11 @@
       <p>Username: <%= @user.username %></p>
 
       <% if @user.points.where(game_id: 1 ).length > 0 %>
-      <p>High Score: <%= @user.points.where(game_id: 1).max_by{|point| point.score.to_i}.score %> for <%= Game.find(1).name %> </p>
+      <p>High Score: <%= @user.points.where(game_id: 1).max_by{|point| point.score.to_i}.score %> for <%= Game.find(1).name.upcase %> GAME </p>
       <% end %>
 
       <% if @user.points.where(game_id: 2).length > 0 %>
-      <p>Fastest Time: <%= @user.points.where(game_id: 2).max_by{|point| point.score.to_i}.score %> for <%= Game.find(2).name %> </p>
+      <p>Fastest Time: <%= @user.points.where(game_id: 2).max_by{|point| point.score.to_i}.score %> for <%= Game.find(2).name.upcase %> GAME </p>
       <% end %>
 
 
