@@ -1,3 +1,46 @@
 // Place all the styles related to the points controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// #point-display {
+//     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+//     border-collapse: collapse;
+//     width: 100%;
+// }
+//
+// #point-display td, #point-display th{
+//     border: 1px solid #ddd;
+//     padding: 8px;
+// }
+//
+// #point-display tr:nth-child(even){
+//   background-color: #f2f2f2;
+//   width: 100%;
+// }
+//
+// #point-display tr:hover {background-color: #ddd;}
+//
+// #point-display th {
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     text-align: left;
+//     background-color: #4CAF50;
+//     color: white;
+// }
+
+.pro-1{
+    border-radius: 8px;
+    border: 1px solid;
+    padding: 8px;
+    width: 600px;
+    resize: horizontal;
+    overflow: auto;
+    margin-bottom: 10px;
+    line-height: .8;
+    text-align: center;
+}
+
+h5{
+  font-family: 'Luckiest Guy', cursive;
+  color: #2a75bb;
+}
