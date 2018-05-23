@@ -16,7 +16,7 @@
       <% end %>
 
       <% if @user.points.where(game_id: 2).length > 0 %>
-      <p>Fastest Time: <%= @user.points.where(game_id: 2).min_by{|point| point.score.to_i}.score %> for <%= Game.find(2).name %> </p>
+      <p>Fastest Time: <%= @user.points.where(game_id: 2).max_by{|point| point.score.to_i}.score %> for <%= Game.find(2).name %> </p>
       <% end %>
 
 

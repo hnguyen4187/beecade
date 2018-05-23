@@ -1,10 +1,15 @@
 <body>
 
+  <div id="point-back">
+    <%=link_to '<-- Back', games_show_path %>
+  </div>
+
   <h1>Pokemon Memory Game</h1>
 
   <div class="timer"></div>
   <div id="memory_board"></div>
-  <div id ="hidden-2">memory</div>
+  <div id="hidden-2">memory</div>
+
 
   <script>newBoard();</script>
 
