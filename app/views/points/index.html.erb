@@ -9,7 +9,7 @@
   <% if user.points.where(game_id: game.id).length > 0 %>
 
   <p>
-    <em>Username: </em><%= user.username %> - <%= user.points.where(game_id:game.id).max_by{|point| point.score.to_i}.score %>
+    <strong>Username: </strong><%= user.username %> - <%= user.points.where(game_id:game.id).max_by{|point| point.score.to_i}.score %>
   </p>
 
   <% end %>
